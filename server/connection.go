@@ -11,6 +11,11 @@ var upgrader = websocket.Upgrader{}
 
 //Connection is the user-bounded thread for his connection
 func Connection(handler *Handler, w http.ResponseWriter, r *http.Request) {
+	
+	upgrader.CheckOrigin = func(r *http.Request) bool { 
+		return true 
+	}
+
 	conn, err := upgrader.Upgrade(w, r, nil)
 	if err != nil {
 		log.Println(err)

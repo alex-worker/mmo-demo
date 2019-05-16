@@ -1,7 +1,7 @@
 package main
 
 import (
-	"Relo/server"
+	"./server"
 	"log"
 	"net/http"
 )

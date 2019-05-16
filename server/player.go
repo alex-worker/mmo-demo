@@ -1,7 +1,7 @@
 package server
 
 import (
-	"Relo/utils"
+	"../utils"
 	"encoding/json"
 	"math"
 	"strconv"
